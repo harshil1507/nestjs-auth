@@ -1,0 +1,37 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type User {
+  id: ID!
+  email: String!
+  firstName: String!
+  lastName: String!
+  age: Int!
+  contactNumber: String!
+  token: String!
+}
+
+type Query {
+  findUser(id: String!): [User!]!
+}
+
+type Mutation {
+  login(loginInput: LoginInput!): User!
+  signup(signupInput: SignupInput!): User!
+}
+
+input LoginInput {
+  email: String
+  password: String!
+  contactNumber: String
+}
+
+input SignupInput {
+  email: String!
+  password: String!
+  contactNumber: String!
+  firstName: String!
+  lastName: String
+  age: Int
+}
